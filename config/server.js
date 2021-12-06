@@ -7,6 +7,7 @@ var app = express();
 app.set("view engine", "ejs");
 app.set("views", "./app/views");
 
+app.use(express.static("./app/public")); // carrega todos os arquivos estáticos da aplicação
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
